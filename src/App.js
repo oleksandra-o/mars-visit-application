@@ -4,6 +4,7 @@ import TravelPreferences from './components/TravelPreferences';
 import HealthSafety from './components/HealthSafety';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import CustomModal from './components/CustomModal';
 import './App.css';
 
 function App() {
@@ -22,11 +23,18 @@ function App() {
     medicalConditions: '',
   });
 
+  const [showModal, setShowModal] = useState(false);
+
   const nextStage = () => setStage(stage + 1);
   const prevStage = () => setStage(stage - 1);
 
   const submitForm = () => {
-    alert('Form submitted successfully!');
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+    // Reset the form or navigate away if necessary
   };
 
   return (
@@ -54,6 +62,7 @@ function App() {
         )}
       </main>
       <Footer />
+      <CustomModal show={showModal} onClose={closeModal} />
     </div>
   );
 }

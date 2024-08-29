@@ -124,3 +124,32 @@ input[type="checkbox"] {
   margin-bottom: 20px;
   text-align: center;
 }
+
+
+/* Header */
+.app-header {
+  background-color: #e76f51;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+
+/* Footer */
+.app-footer {
+  background-color: #472b18;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+.app-footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}

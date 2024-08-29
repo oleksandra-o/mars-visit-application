@@ -1,23 +1,55 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import PersonalInfo from './components/PersonalInfo';
+import TravelPreferences from './components/TravelPreferences';
+import HealthSafety from './components/HealthSafety';
 import './App.css';
 
+
 function App() {
+  const [stage, setStage] = useState(1);
+  const [formData, setFormData] = useState({
+    fullName: '',
+    dob: '',
+    email: '',
+    phone: '',
+    departureDate: '',
+    returnDate: '',
+    accommodation: '',
+    specialRequests: '',
+    healthDeclaration: '',
+    emergencyContact: '',
+    medicalConditions: '',
+  });
+
+  const nextStage = () => setStage(stage + 1);
+  const prevStage = () => setStage(stage - 1);
+
+  const submitForm = () => {
+    alert('Form submitted successfully!');
+    
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {stage === 1 && (
+        <PersonalInfo formData={formData} setFormData={setFormData} nextStage={nextStage} />
+      )}
+      {stage === 2 && (
+        <TravelPreferences
+          formData={formData}
+          setFormData={setFormData}
+          nextStage={nextStage}
+          prevStage={prevStage}
+        />
+      )}
+      {stage === 3 && (
+        <HealthSafety
+          formData={formData}
+          setFormData={setFormData}
+          prevStage={prevStage}
+          submitForm={submitForm}
+        />
+      )}
     </div>
   );
 }

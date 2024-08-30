@@ -34,7 +34,7 @@ function App() {
 
   const closeModal = () => {
     setShowModal(false);
-    // Reset the form or navigate away if necessary
+   
   };
 
   return (

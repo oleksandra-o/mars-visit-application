@@ -14,13 +14,19 @@ Project Structure
 The application is structured as a React project with the following main components:
 
 PersonalInfo.js: Handles the Personal Information stage.
+
 TravelPreferences.js: Manages the Travel Preferences stage.
+
 HealthSafety.js: Handles the Health and Safety stage.
+
 Header.js: Displays the header of the application.
+
 Footer.js: Displays the footer, which is sticky and remains at the bottom of the page.
+
 CustomModal.js: A custom modal used to display the success message after form submission.
 
-Key Features
+
+Key Features:
 Form Validation: Ensures all required fields are filled out correctly, including email, phone, and date formats.
 Navigation: Users can navigate back and forth between the stages to review or edit their information.
 Responsive Design: The form is styled with a Mars-themed color scheme and is responsive to various screen sizes.

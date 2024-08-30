@@ -106,7 +106,7 @@ form .error-message {
   margin-bottom: 10px;
 }
 
-/* Custom Checkboxes and Radio Buttons */
+
 input[type="radio"] {
   margin-right: 10px;
 }
@@ -176,7 +176,7 @@ main {
   color: #ffffff;
   text-align: center;
   padding: 10px 0;
-  margin-top: auto; /* Ensures the footer sticks to the bottom */
+  margin-top: auto; /* footer sticks to the bottom */
   width: 100%;
 }
 
